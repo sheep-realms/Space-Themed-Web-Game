@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cursor-default: url(/res/cursor/default.cur), default;
+    --cursor-aim: url(/res/cursor/aim.cur), pointer;
+    --cursor-attack: url(/res/cursor/attack.cur), pointer;
+    --cursor-attack-candidate: url(/res/cursor/attack-candidate.cur), pointer;
+    --cursor-attack-disable: url(/res/cursor/attack-disable.cur), not-allowed;
+    --cursor-disable: url(/res/cursor/disable.cur), not-allowed;
+    --cursor-nav: url(/res/cursor/nav.cur), pointer;
+    --cursor-repair: url(/res/cursor/repair.cur), pointer;
+    --cursor-res-recovery: url(/res/cursor/res-recovery.cur), pointer;
+    --cursor-scan: url(/res/cursor/scan.cur), pointer;
+    --cursor-scan-abuser: url(/res/cursor/scan-abuser.cur), pointer;
+    --cursor-scan-disable: url(/res/cursor/scan-disable.cur), not-allowed;
+    --cursor-scan-general: url(/res/cursor/scan-general.cur), pointer;
+}
+
+body {
+    background: #1d5a83;
+    background: -webkit-radial-gradient(center ellipse, #0a2e38 0%, #000000 100%);
+    background: radial-gradient(ellipse at center, #1b5e70 0%, #061f25 100%);
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    color: #FFF;
+    cursor: var(--cursor-default);
+}
+
+#game-window {
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#game-launcher-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}

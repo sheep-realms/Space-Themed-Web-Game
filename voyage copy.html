@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="res/style/common.css">
+    <script src="lib/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+    <div id="game-window">
+        <div id="system-topbar" class="system-panel"></div>
+        <div id="system-content">
+            <div id="system-content-left">
+                <div id="system-voyage-player" class="system-panel">
+                    <div style="background-color: rgba(255,32,32,0.35); text-align: center; padding: 10px; color: #FF4040; margin-bottom: 10px;">
+                        部分配置由本次航行任务内容锁定
+                    </div>
+                    <div id="system-voyage-player-info">
+                        <div class="header tr">
+                            <div class="name">舰长</div>
+                            <div class="ship-name">舰名</div>
+                            <div class="factions">派系</div>
+                            <div class="team">队伍</div>
+                        </div>
+                        <div class="tr">
+                            <div class="name">Sheep-realms</div>
+                            <div class="ship-name" style="opacity: 0.5;">远航号</div>
+                            <div class="factions" style="opacity: 0.5;">极光</div>
+                            <div class="team" style="opacity: 0.5;">A</div>
+                        </div>
+                        <div class="tr" style="opacity: 0.5;">
+                            <div class="name">未知</div>
+                            <div class="ship-name">狂风号</div>
+                            <div class="factions">未知</div>
+                            <div class="team">B</div>
+                        </div>
+                        <div style="background-color: rgba(176, 216, 228, 0.25); text-align: center; padding: 10px; margin-top: 10px;">
+                            部分舰船信息被隐藏
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="system-content-right">
+                <div id="system-voyage-info" class="system-panel">
+                    <div class="block">
+                        <p>航行空域：未探索星系 UG-376</p>
+                        <p>资源总量：未知</p>
+                        <p>空域特性：</p>
+                        <p>- 稀缺资源：采矿效率会更早下降，直至无法采集</p>
+                        <p>- 航图缺失：缺少航图信息，航速下降</p>
+                    </div>
+                    <div class="block">
+                        <p>我们在几小时前捕捉到了“狂风号”的信号，确定其位于 UG-376，附近无其他敌对势力的舰队，现在是制裁“狂风号”的好时机。</p>
+                        <p>请注意，我们并不了解 UG-376，可能会遇到意料之外的状况，请多加留意。</p>
+                    </div>
+                    <div class="block">
+                        <p>任务目标：</p>
+                        <p>- 击沉舰船“狂风号”及其护卫舰</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="system-bottombar" class="system-panel"></div>
+    </div>
+</body>
+</html>

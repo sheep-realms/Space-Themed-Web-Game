@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="res/style/common.css">
+    <script src="lib/jquery-1.7.2.min.js"></script>
+    <style>
+        #game-window {
+            justify-content: flex-start;
+        }
+        #game-window>p {
+            padding: 0 16px;
+        }
+        #game-window>p:hover {
+            background-color: rgba(49, 133, 156, 0.35);
+        }
+        #system-topbar {
+            overflow: hidden;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-window">
+        <div id="system-topbar" class="system-panel">Cursor Debug</div>
+        <p style="cursor: var(--cursor-default);">default</p>
+        <p style="cursor: var(--cursor-disable);">disable</p>
+        <p style="cursor: var(--cursor-repair);">repair</p>
+        <p style="cursor: var(--cursor-res-recovery);">res-recovery</p>
+        <p style="cursor: var(--cursor-aim);">aim</p>
+        <p style="cursor: var(--cursor-attack);">attack</p>
+        <p style="cursor: var(--cursor-attack-disable);">attack-disable</p>
+        <p style="cursor: var(--cursor-attack-candidate);">attack-candidate</p>
+        <p style="cursor: var(--cursor-scan);">scan</p>
+        <p style="cursor: var(--cursor-scan-general);">scan-general</p>
+        <p style="cursor: var(--cursor-scan-abuser);">scan-abuser</p>
+        <p style="cursor: var(--cursor-scan-disable);">scan-disable</p>
+        <p style="cursor: var(--cursor-nav);">nav</p>
+    </div>
+</body>
+</html>

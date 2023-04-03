@@ -1,0 +1,54 @@
+[
+    {
+        "name": "p1",
+        "cost": 150,
+        "root": true,
+        "build_time": 20,
+        "attribute": {
+            "res_max": 500,
+            "col_max": 50,
+            "col_spd": 2,
+            "col_out_spd": 4,
+            "rpr_spd": 1
+        },
+        "next": [
+            "p2"
+        ]
+    }, {
+        "name": "p2",
+        "cost": 300,
+        "build_time": 20,
+        "attribute": {
+            "res_max": 720,
+            "col_max": 60,
+            "col_spd": 3,
+            "col_out_spd": 6,
+            "rpr_spd": 2
+        },
+        "next": [
+            "p3"
+        ]
+    }, {
+        "name": "p3",
+        "cost": 450,
+        "build_time": 40,
+        "attribute": {
+            "res_max": 840,
+            "col_max": 80,
+            "col_spd": 4,
+            "col_out_spd": 8,
+            "rpr_spd": 3
+        }
+    }, {
+        "name": "p4",
+        "cost": 650,
+        "build_time": 50,
+        "attribute": {
+            "res_max": 1000,
+            "col_max": 100,
+            "col_spd": 5,
+            "col_out_spd": 10,
+            "rpr_spd": 4
+        }
+    }
+]

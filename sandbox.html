@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="res/style/common.css">
+    <script src="lib/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+    <div id="game-window">
+        <div id="system-topbar" class="system-panel"></div>
+        <div id="system-content">
+            <div id="system-content-left"></div>
+            <div id="system-content-right">
+                <div id="system-dashboard" class="system-panel">
+                    <div id="progress-hp" class="system-dashboard-progress">
+                        <div class="system-dashboard-progress-title">STR</div>
+                        <div class="system-dashboard-progress-content">
+                            <div class="system-dashboard-progress-bg">
+                                <div class="system-dashboard-progress-value" style="width: 80%;"></div>
+                                <div class="system-dashboard-progress-text">
+                                    <span class="value">80</span>
+                                    <span class="max">100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-dashboard-progress">
+                        <div class="system-dashboard-progress-title">SLD</div>
+                        <div class="system-dashboard-progress-content">
+                            <div class="system-dashboard-progress-bg">
+                                <div class="system-dashboard-progress-value" style="width: 20%;"></div>
+                                <div class="system-dashboard-progress-text">
+                                    <span class="value">20</span>
+                                    <span class="max">100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-dashboard-progress">
+                        <div class="system-dashboard-progress-title">COL</div>
+                        <div class="system-dashboard-progress-content">
+                            <div class="system-dashboard-progress-bg">
+                                <div class="system-dashboard-progress-value"></div>
+                                <div class="system-dashboard-progress-text">
+                                    <span class="value">100</span>
+                                    <span class="max">100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-dashboard-progress">
+                        <div class="system-dashboard-progress-title">RES</div>
+                        <div class="system-dashboard-progress-content">
+                            <div class="system-dashboard-progress-bg">
+                                <div class="system-dashboard-progress-value"></div>
+                                <div class="system-dashboard-progress-text">
+                                    <span class="value">100</span>
+                                    <span class="max">100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="system-build" class="system-panel">
+                    <div class="system-tabpage">
+                        <div class="system-tabpage-tab">
+                            <span class="system-tabpage-tab-item">概览</span>
+                            <span class="system-tabpage-tab-item">基建</span>
+                            <span class="system-tabpage-tab-item">主炮</span>
+                            <span class="system-tabpage-tab-item">副炮</span>
+                            <span class="system-tabpage-tab-item">无人机</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="system-bottombar" class="system-panel"></div>
+    </div>
+</body>
+</html>
