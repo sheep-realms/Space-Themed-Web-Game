@@ -3,7 +3,7 @@
         "game": {
             "topbar": {
                 "mainloop": {
-                    "name": "梅因循环工作指示器",
+                    "name": "メインサイクル動作指示器",
                     "des": "梅因循环系统是建立您与舰船控制系统的远程连接的重要系统。受黑洞的时空影响，您所控制舰船的时间流速可能与你当前时空不一致，梅因循环工作指示器届时将会加快或减慢闪烁频率来提醒您。当您需要休息而要暂停您的工作时，点击此指示器可暂时中断您与舰船控制系统的连接。"
                 }
             }
@@ -13,31 +13,31 @@
         "random_name": {
             "group_1": {
                 "before": {
-                    "0": "长门",
-                    "1": "凉宫",
+                    "0": "長門",
+                    "1": "涼宮",
                     "2": "泉",
                     "3": "吉村",
-                    "4": "朝仓",
+                    "4": "朝倉",
                     "5": "岩崎"
                 },
                 "after": {
                     "0": "有希",
-                    "1": "春日",
-                    "2": "此方",
+                    "1": "ハルヒ",
+                    "2": "こなた",
                     "3": "美代子",
-                    "4": "凉子",
-                    "5": "南"
+                    "4": "涼子",
+                    "5": "みなみ"
                 }
             },
             "group_2": {
                 "before": {
-                    "0": "刘",
-                    "1": "张",
-                    "2": "诸",
+                    "0": "劉",
+                    "1": "張",
+                    "2": "諸",
                     "3": "王"
                 },
                 "after": {
-                    "0": "培强",
+                    "0": "培強",
                     "1": "北海",
                     "2": "葛亮",
                     "3": "司徒"
@@ -83,19 +83,19 @@
         }
     },
     "base": {
-        "index": "基建设施",
+        "index": "インフラストラクチャ",
         "keel": {
-            "index": "龙骨",
+            "index": "キール",
             "k1": {
-                "name": "基础龙骨",
+                "name": "ベースキール",
                 "des": "最基础的龙骨组件，舰船的脊椎，是舰船的重要组成部分。它是经过无数代人的研究，设计出的最经济最实惠的方案，是广大星际旅行者和小型舰船设计师的首选。"
             },
             "k2": {
-                "name": "增强龙骨",
+                "name": "エンハンスメントキール",
                 "des": "基于基础龙骨设计的增强版，适用于比较危险的旅行航线。这款龙骨大幅度提高了结构稳定性，可以承受一定规模的小型陨石攻击，还预留了维护通道以便于维护。对于那些喜欢冒险但又不舍得花钱的人来说，这款龙骨再适合不过了。"
             },
             "k3": {
-                "name": "可拓展型龙骨-开发版",
+                "name": "拡張可能なキール - 開発版",
                 "des": "最受设计师欢迎的可开发龙骨套件，适用于各种应用场景。在增强了结构稳定性的同时，还提供了很大的开发空间。这款龙骨使用了独特的接口适配各类龙骨组件，大幅度提高了开发自由度。"
             },
             "k4_1": {
@@ -108,7 +108,7 @@
             }
         },
         "produce": {
-            "index": "生产设施",
+            "index": "生産施設",
             "p1": {
                 "name": "基础生产设施"
             }
@@ -125,21 +125,21 @@
         }
     },
     "broad": {
-        "arms_unlock": "侦测到未知舰船信号，武器模块升级方案已获准使用。",
-        "controller_offline": "舰船控制系统已下线。",
-        "controller_online": "舰船控制系统已上线。",
+        "arms_unlock": "未知の艦船信号を検出し、武器モジュールのアップグレード案は使用が許可された。",
+        "controller_offline": "艦船制御システムがラインオフした。",
+        "controller_online": "艦船制御システムがオンラインになった。",
         "game_over": "舰船已被摧毁，星际冒险止步于此...",
         "game_start": "舰船已起航，开始星际冒险。",
         "emp_hit": "我舰遭受来自 {name} 的EMP攻击！",
         "emp_hit_unknown": "我舰遭受EMP攻击！",
         "emp_remove": "电力已恢复。",
         "equip_building": "{name} 建造中...",
-        "equip_building_up": "{name} 正在改造为 {name2} ...",
-        "equip_build_cancel": "{name} 建造已取消。",
-        "equip_build_up_cancel": "{name} 改造已取消。",
-        "equip_built": "{name} 建造完成。",
-        "equip_built_up": "{name} 改造完成。",
-        "res_lack": "资源枯竭。",
+        "equip_building_up": "{name} を {name2} に改造中...",
+        "equip_build_cancel": "{name} 建造キャンセル。",
+        "equip_build_up_cancel": "{name} 改造キャンセル。",
+        "equip_build": "{name} 建造が完了した。",
+        "equip_build_up": "{name} 改造が完了した。",
+        "res_lack": "資源が枯渇する。",
         "res_lack_attack": "资源枯竭，无法开火。",
         "res_lack_build": "资源枯竭，建造已暂停。",
         "warship_aim": "已瞄准目标 {name} ！",
@@ -158,16 +158,16 @@
         "warship_found_attack_me": "发现新舰船 {name} 正在向我舰开火！",
         "warship_found_attack_third": "发现新舰船 {name} 正在向 {name2} 开火！",
         "warship_found_attack_unknown": "发现新舰船 {name} 正在向不明目标开火！",
-        "warship_found_me": "我舰已被 {name} 发现！",
-        "warship_found_near": "发现新舰船 {name} 在我舰附近！",
-        "warship_listened": "侦听到新舰船信号！",
-        "warship_scanning": "扫描信号中...",
-        "warship_scanning_me": "我舰正在被 {name} 扫描！",
-        "warship_scanning_me_unknown": "我舰正在被不明目标扫描！",
-        "warship_sunk_me": "我舰已被 {name} 击沉！",
-        "warship_sunk_me_unknown": "我舰已被击沉！",
-        "warship_sunk_third": "{name} 已被 {name2} 击沉！",
-        "warship_sunk_third_me": "{name} 已被我舰击沉！",
-        "warship_sunk_third_unknown": "{name} 已被击沉！"
+        "warship_found_me": "我が艦はすでに {name} に発見された！",
+        "warship_found_near": "新しい艦船 {name} が我が艦の近くにあることを発見！",
+        "warship_listened": "新しい艦船の信号をキャッチ！",
+        "warship_scanning": "スキャン信号中...",
+        "warship_scanning_me": "我が艦は {name} にスキャンされています！",
+        "warship_scanning_me_unknown": "我が艦は不明な目標にスキャンされている！",
+        "warship_sunk_me": "我が艦は {name} に撃沈された！",
+        "warship_sunk_me_unknown": "我が艦は撃沈された！",
+        "warship_sunk_third": "{name} は {name2} に撃沈されました！",
+        "warship_sunk_third_me": "{name} は我が艦に撃沈された！",
+        "warship_sunk_third_unknown": "{name} は撃沈された！"
     }
 }
