@@ -4,19 +4,19 @@
 }
 
 :root {
-    --cursor-default: url(/res/cursor/default.cur), default;
-    --cursor-aim: url(/res/cursor/aim.cur), pointer;
-    --cursor-attack: url(/res/cursor/attack.cur), pointer;
-    --cursor-attack-candidate: url(/res/cursor/attack-candidate.cur), pointer;
-    --cursor-attack-disable: url(/res/cursor/attack-disable.cur), not-allowed;
-    --cursor-disable: url(/res/cursor/disable.cur), not-allowed;
-    --cursor-nav: url(/res/cursor/nav.cur), pointer;
-    --cursor-repair: url(/res/cursor/repair.cur), pointer;
-    --cursor-res-recovery: url(/res/cursor/res-recovery.cur), pointer;
-    --cursor-scan: url(/res/cursor/scan.cur), pointer;
-    --cursor-scan-abuser: url(/res/cursor/scan-abuser.cur), pointer;
-    --cursor-scan-disable: url(/res/cursor/scan-disable.cur), not-allowed;
-    --cursor-scan-general: url(/res/cursor/scan-general.cur), pointer;
+    --cursor-default: url(../cursor/default.cur), default;
+    --cursor-aim: url(../cursor/aim.cur), pointer;
+    --cursor-attack: url(../cursor/attack.cur), pointer;
+    --cursor-attack-candidate: url(../cursor/attack-candidate.cur), pointer;
+    --cursor-attack-disable: url(../cursor/attack-disable.cur), not-allowed;
+    --cursor-disable: url(../cursor/disable.cur), not-allowed;
+    --cursor-nav: url(../cursor/nav.cur), pointer;
+    --cursor-repair: url(../cursor/repair.cur), pointer;
+    --cursor-res-recovery: url(../cursor/res-recovery.cur), pointer;
+    --cursor-scan: url(../cursor/scan.cur), pointer;
+    --cursor-scan-abuser: url(../cursor/scan-abuser.cur), pointer;
+    --cursor-scan-disable: url(../cursor/scan-disable.cur), not-allowed;
+    --cursor-scan-general: url(../cursor/scan-general.cur), pointer;
 }
 
 body {
