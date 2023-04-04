@@ -53,6 +53,7 @@ class Player {
             survivalTick: 0,    // 生存时间
             colCount: 0         // 资源采集量
         };
+        this.game = {};
     }
 
     /**

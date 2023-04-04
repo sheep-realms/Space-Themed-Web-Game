@@ -47,7 +47,7 @@ let loadList = [
         name: 'Game',
         className: 'game',
         type: 'load_class',
-        path: 'res/Game.js'
+        path: 'res/class/Game.js'
     }, {
         name: 'Player',
         className: 'player',
@@ -82,6 +82,8 @@ let stylesheet = [
     'echo'
 ];
 
+let loadingTimer = 0;
+
 function loadListRun() {
     loadNow = loadList.shift();
     switch (loadNow.type) {
@@ -94,6 +96,7 @@ function loadListRun() {
             break;
     
         default:
+            clearTimeout(loadingTimer);
             loadScript(loadNow.path);
             break;
     }
@@ -126,6 +129,10 @@ $(document).ready(function() {
 
     launcherMsg('Base resource loaded.');
     launcherMsg('I18N module loading...');
+
+    loadingTimer = setTimeout(function() {
+        launcherMsg('The loading time is too long. We recommend that you deploy this project locally.');
+    }, 30000);
 
     loader.load('lang/zh_cn.json', 'lang.zh_cn');
     loader.load('res/data/base/produce.json', 'res.data.base.produce');

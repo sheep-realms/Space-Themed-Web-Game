@@ -65,6 +65,7 @@ class Game {
      * @param {Player} player 玩家对象
      */
     join(player) {
+        player.game = this;
         this.player.push(player);
     }
 

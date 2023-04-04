@@ -75,6 +75,12 @@ function stateUpdate(type, value, max) {
 
 $('#game-window').append(`<div id="echo-mini"></div>`)
 
+$('#echo-mini').prepend(`<div class="echo-mini-item">
+        <div class="echo-mini-item-box">
+            <div class="echo-mini-item-content">您好！欢迎前来参观这款游戏。这个游戏目前还不能正常运行，在控制台输入 game.start() 可观赏游戏运行大致效果。<br>输入 tester.setRes(500) 可以将您的资源量设为 500。<br>输入 tester.build() 可以建造某个设施（花费 300 资源）。</div>
+        </div>
+    </div>`)
+
 $(document).on('click', '#progress-col:not(.disable)', function() {
     game.player[0].state.col_sta = 1;
 });
@@ -87,3 +93,35 @@ core.system.broad.on('newMessage', function(msg) {
         </div>
     </div>`)
 });
+
+class Tester {
+    constructor() {
+        
+    }
+
+    build() {
+        p1.base.produce.build({
+            "name": "p2",
+            "cost": "300",
+            "build_time": 20,
+            "attribute": {
+                "res_max": 720,
+                "col_max": 60,
+                "col_spd": 3,
+                "col_out_spd": 6,
+                "rpr_spd": 2
+            },
+            "next": [
+                "p3"
+            ]
+        })
+    }
+
+    setRes(res) {
+        game.player[0].state.res = res;
+    }
+}
+
+let tester = new Tester();
+
+
