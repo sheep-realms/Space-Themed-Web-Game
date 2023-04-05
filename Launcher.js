@@ -98,6 +98,8 @@ function loadListRun() {
         default:
             clearTimeout(loadingTimer);
             loadScript(loadNow.path);
+
+            $('script[src="Launcher.js"]').remove();
             break;
     }
 }
