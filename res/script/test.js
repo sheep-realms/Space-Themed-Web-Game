@@ -5,6 +5,7 @@ p1.create();
 
 // 创建游戏
 let game = new Game();
+core.newGame(game);
 // 加入玩家
 game.join(p1);
 
@@ -100,7 +101,7 @@ class Tester {
     }
 
     build() {
-        p1.base.produce.build({
+        p1.actionBuildBase('produce', {
             "name": "p2",
             "cost": "300",
             "build_time": 20,

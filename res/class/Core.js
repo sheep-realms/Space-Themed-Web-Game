@@ -3,6 +3,28 @@
  */
 class Core {
     constructor() {
+        this.game = {
+            list: []
+        };
+
+        this.newGame = function(obj) {
+            obj.core = this;
+            this.game.list.push(obj);
+        }
+
+        this.module = {
+            mixer: undefined
+        };
+
+        this.moduleLoad = function(key, obj) {
+            this.module[key] = obj;
+            obj.core = this;
+        };
+
+        this.playSound = function(name, volume = 1, rate = 1) {
+            this.module.mixer.play(name, volume, rate);
+        };
+
         this.style = {};
         
         this.style.load = function(filepath) {

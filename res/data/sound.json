@@ -1,0 +1,9 @@
+[
+    {
+        "name": "event.building",
+        "path": "/res/audio/se/building.ogg"
+    }, {
+        "name": "event.warship_listened",
+        "path": "/res/audio/se/warship_listened.ogg"
+    }
+]

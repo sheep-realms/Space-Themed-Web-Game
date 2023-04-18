@@ -4,6 +4,7 @@
 class Game {
     constructor() {
         this.name = "space";
+        this.core = undefined;
         this.loopTimer = 0;
         this.player = [];
         this.map = {
@@ -181,4 +182,8 @@ class Game {
     setColEfficiency(value) {
         return this.map.resources.col_efficiency = value;
     }
+
+    playSound(name, volume = 1, rate = 1) {
+        this.core.playSound(name, volume, rate);
+    };
 }
