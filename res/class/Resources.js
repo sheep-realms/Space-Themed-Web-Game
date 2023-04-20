@@ -7,9 +7,10 @@ class Resources {
     }
 
     input(path, value) {
-        this.res[path] = value;
+        let obj = new Object(value);
+        this.res[path] = obj;
         if (this.event.input[path] != undefined && typeof this.event.input[path] == 'function') {
-            this.event.input[path](value);
+            this.event.input[path](obj);
         }
     }
 
