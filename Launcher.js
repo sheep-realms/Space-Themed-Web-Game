@@ -82,6 +82,16 @@ let loadList = [
 
 let loadNow = {};
 
+let dataList = [
+    {
+        key: 'sound',
+        path: 'sound.json'
+    }, {
+        key: 'base.produce',
+        path: 'base/produce.json'
+    }
+];
+
 let stylesheet = [
     'SSUI',
     'echo'

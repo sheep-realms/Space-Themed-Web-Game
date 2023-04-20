@@ -1,17 +1,37 @@
 class Mixer {
     constructor() {
         this.core = undefined;
-        this.audioDB = {
-            building: "/res/audio/se/building.ogg",
-            warship_listened: "/res/audio/se/warship_listened.ogg"
-        };
+        this.audioDB = [];
     }
 
-    play(name, volume = 1, rate = 1) {
-        let a = new Audio(this.audioDB[name]);
-        a.volume = volume;
-        a.playbackRate = rate;
-        a.onended = function () {delete this;};
+    find(name) {
+        return this.audioDB.find(function(e) {
+            return e.name == name
+        });
+    }
+
+    play(name, volume = undefined, rate = undefined) {
+        let obj = this.find(name);
+        if (obj == undefined) return undefined;
+        let a = new Audio(obj.path);
+
+        if (volume != undefined) {
+            a.volume = volume
+        } else if (obj?.volume != undefined) {
+            a.volume = obj.volume
+        } else {
+            a.volume = 1;
+        };
+
+        if (rate != undefined) {
+            a.playbackRate = rate
+        } else if (obj?.rate != undefined) {
+            a.playbackRate = obj.rate
+        } else {
+            a.playbackRate = 1;
+        };
+        
+        a.onended = function () {delete this};
         a.play();
     }
 }
@@ -19,3 +39,9 @@ class Mixer {
 let mixer = new Mixer();
 
 core.moduleLoad('mixer', mixer);
+
+loader.load('res/data/sound.json', 'sound');
+
+resources.onInput('sound', function(value) {
+    mixer.audioDB = value;
+});

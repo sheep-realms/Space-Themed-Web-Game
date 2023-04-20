@@ -183,7 +183,7 @@ class Game {
         return this.map.resources.col_efficiency = value;
     }
 
-    playSound(name, volume = 1, rate = 1) {
+    playSound(name, volume = undefined, rate = undefined) {
         this.core.playSound(name, volume, rate);
     };
 }

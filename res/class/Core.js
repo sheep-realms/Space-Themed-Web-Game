@@ -21,7 +21,7 @@ class Core {
             obj.core = this;
         };
 
-        this.playSound = function(name, volume = 1, rate = 1) {
+        this.playSound = function(name, volume = undefined, rate = undefined) {
             this.module.mixer.play(name, volume, rate);
         };
 

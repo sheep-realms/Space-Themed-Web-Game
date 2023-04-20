@@ -9,7 +9,7 @@ class Resources {
     input(path, value) {
         this.res[path] = value;
         if (this.event.input[path] != undefined && typeof this.event.input[path] == 'function') {
-            this.event.input[path]();
+            this.event.input[path](value);
         }
     }
 
