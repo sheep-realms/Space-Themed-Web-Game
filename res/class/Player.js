@@ -191,7 +191,7 @@ class Player {
             name: $t(`base.produce.${this.base[slot].name}.name`),
             name2: $t(`base.produce.${data.name}.name`)
         });
-        this.game.playSound('building');
+        this.game.playSound('event.building');
     }
 
     /**
