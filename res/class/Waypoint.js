@@ -1,7 +1,8 @@
 class Waypoint {
-    constructor() {
+    constructor(pos = [0, 0], id = "waypoint") {
         this.name = "waypoint";
-        this.pos = [0, 0];
+        this.id = id;
+        this.pos = pos;
         this.attribute = {
             hp_max: 0,
             sld_max: 0,

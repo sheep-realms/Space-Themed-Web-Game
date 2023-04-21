@@ -21,6 +21,12 @@ class Core {
             obj.core = this;
         };
 
+        /**
+         * 播放音频
+         * @param {String} name 音频ID
+         * @param {Number} [volume = undefined] 音量
+         * @param {Number} [rate = undefined] 播放速度
+         */
         this.playSound = function(name, volume = undefined, rate = undefined) {
             this.module.mixer.play(name, volume, rate);
         };

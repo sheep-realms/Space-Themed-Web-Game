@@ -301,12 +301,13 @@ class Player {
 
     /**
      * 玩家移动到指定路径点
-     * @param {Waypoint} waypoint 路径点对象
+     * @param {String} waypoint 路径点ID
      * @param {Number} [distance] 距离
      * @returns {Array}
      */
     moveToWaypoint(waypoint, distance = this.attribute.mov_spd) {
-        return this.moveTo(waypoint.pos, distance);
+        let pos = this.game.getWaypointPos(waypoint);
+        return this.moveTo(pos, distance);
     }
 }
 

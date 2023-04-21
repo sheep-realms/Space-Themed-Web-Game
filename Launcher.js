@@ -59,6 +59,11 @@ let loadList = [
         type: 'load_class',
         path: 'res/class/Base.js'
     }, {
+        name: 'Waypoint',
+        className: 'waypoint',
+        type: 'load_class',
+        path: 'res/class/Waypoint.js'
+    }, {
         name: 'Mixer',
         className: 'mixer',
         type: 'load_class',

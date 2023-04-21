@@ -49,6 +49,10 @@ p1.setBase('keel', testbase2);
 // 设置地图资源总量
 game.setResMax(5000);
 
+// 设置路径点
+let wcore = new Waypoint([0, 0], 'core');
+game.addWaypoint(wcore);
+
 ssui.loadScreen('gameMain');
 
 game.on('playerStateUpdate', function(state, attribute) {

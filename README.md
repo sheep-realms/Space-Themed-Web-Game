@@ -23,3 +23,18 @@ res/ - 资源
 └ style/ - 样式表
 index.html - 首页
 ```
+
+## 类
+| 类名 | 描述 |
+| - | - |
+| Base | 【游戏】基建设施 |
+| Core | 【系统】系统核心 |
+| Game | 【游戏】游戏对局 |
+| Mixer | 【系统】混音器 |
+| Player | 【游戏】玩家 |
+| Resources | 【系统】资源管理 |
+| SSUI | 【系统】SSUI |
+| SSUIComponent | 【系统】SSUI 组件 |
+| SSUIScreen | 【系统】SSUI 画面 |
+| Translator | 【系统】本地化 |
+| Waypoint | 【游戏】路径点 |

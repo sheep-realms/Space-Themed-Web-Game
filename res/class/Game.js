@@ -7,6 +7,7 @@ class Game {
         this.core = undefined;
         this.loopTimer = 0;
         this.player = [];
+        this.waypoint = [];
         this.map = {
             gamerule: {
                 scarce_resources: false
@@ -68,6 +69,16 @@ class Game {
     join(player) {
         player.game = this;
         this.player.push(player);
+    }
+
+    addWaypoint(waypoint) {
+        this.waypoint.push(waypoint);
+    }
+
+    getWaypointPos(id) {
+        return this.waypoint.find(function(e) {
+            return e.id == id;
+        }).pos;
     }
 
     /**
@@ -183,6 +194,12 @@ class Game {
         return this.map.resources.col_efficiency = value;
     }
 
+    /**
+     * 播放音频
+     * @param {String} name 音频ID
+     * @param {Number} [volume = undefined] 音量
+     * @param {Number} [rate = undefined] 播放速度
+     */
     playSound(name, volume = undefined, rate = undefined) {
         this.core.playSound(name, volume, rate);
     };
