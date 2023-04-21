@@ -16,7 +16,8 @@ class Base {
             bs_min: 0,
             lis_max: 0,
             lis_min: 0,
-            rpr_spd: 0
+            rpr_spd: 0,
+            mov_spd: 0
         };
         this.buildData = {};
     }

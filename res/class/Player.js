@@ -29,7 +29,8 @@ class Player {
             obs_max: 0,     // 最大观测距离
             lis_min: 0,     // 强制侦听距离
             lis_max: 0,     // 最大侦听距离
-            rpr_spd: 0      // 维修速度
+            rpr_spd: 0,     // 维修速度
+            mov_spd: 0      // 移动速度
         };
         // 基建设施
         this.base = {
@@ -53,6 +54,10 @@ class Player {
             survivalTick: 0,    // 生存时间
             colCount: 0         // 资源采集量
         };
+        // 攻击目标
+        this.target = [];
+        // 路径点
+        this.waypoint = [];
         this.game = {};
     }
 
@@ -85,7 +90,9 @@ class Player {
             obs_min: 0,
             obs_max: 0,
             lis_min: 0,
-            lis_max: 0
+            lis_max: 0,
+            rpr_spd: 0,
+            mov_spd: 0
         };
 
         for (let b in this.base) {
@@ -234,6 +241,72 @@ class Player {
             this.broadCd[a]--;
             if (this.broadCd[a] <= 0) delete this.broadCd[a];
         }
+    }
+
+    /**
+     * 玩家移动
+     * @param {Number} angle 角度
+     * @param {Number} [distance] 移动距离
+     * @returns {Array}
+     */
+    move(angle, distance = this.attribute.mov_spd) {
+        if (distance <= 0) return this.pos;
+        if (angle >= 360 || angle <= -360) return; 
+        let x = this.pos[0];
+        let y = this.pos[1];
+
+        switch (angle) {
+            case 0:
+                x += distance;
+                break;
+                
+            case 90:
+            case -270:
+                y += distance;
+                break;
+            
+            case 180:
+            case -180:
+                x -= distance;
+                break;
+
+            case 270:
+            case -90:
+                y -= distance;
+                break;
+        
+            default:
+                let dx = Math.cos(angle * Math.PI/180) * distance + x;
+                let dy = Math.sin(angle * Math.PI/180) * distance + y;
+                return this.pos = [dx, dy];
+        }
+        
+        return this.pos = [x, y];
+    }
+
+    /**
+     * 玩家移动到指定位置
+     * @param {Array} pos 坐标
+     * @param {Number} [distance] 移动距离
+     * @returns {Array}
+     */
+    moveTo(pos, distance = this.attribute.mov_spd) {
+        if (distance <= 0) return this.pos;
+        let d = this.game.getDistance(this.pos, pos);
+        if (distance > d) distance = d;
+        let radian = Math.atan2(pos[1] - this.pos[1], pos[0] - this.pos[0]);
+        let angle = 180 / Math.PI * radian;
+        return this.move(angle, distance);
+    }
+
+    /**
+     * 玩家移动到指定路径点
+     * @param {Waypoint} waypoint 路径点对象
+     * @param {Number} [distance] 距离
+     * @returns {Array}
+     */
+    moveToWaypoint(waypoint, distance = this.attribute.mov_spd) {
+        return this.moveTo(waypoint.pos, distance);
     }
 }
 
