@@ -85,4 +85,22 @@ class Base {
             };
         }
     }
+
+    /**
+     * 初始化设施
+     * @param {String} type 设施类型
+     * @param {String} id 设施ID
+     */
+    create(type, id) {
+        let obj = resources.res['res.data.base.' + type].find(function(e) {
+            return e.name == id;
+        });
+
+        this.name = obj.name;
+        this.cost = obj.cost;
+        this.attribute = obj.attribute;
+        this.buildData = {};
+
+        return this;
+    }
 }

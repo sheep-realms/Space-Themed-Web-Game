@@ -40,8 +40,8 @@ let mixer = new Mixer();
 
 core.moduleLoad('mixer', mixer);
 
-loader.load('res/data/sound.json', 'sound');
+loader.load('res/data/sound.json', 'res.data.sound');
 
-resources.onInput('sound', function(value) {
+resources.onInput('res.data.sound', function(value) {
     mixer.audioDB = value;
 });
