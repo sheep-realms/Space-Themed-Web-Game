@@ -49,6 +49,11 @@ let loadList = [
         type: 'load_class',
         path: 'res/class/Game.js'
     }, {
+        name: 'Entity',
+        className: 'entity',
+        type: 'load_class',
+        path: 'res/class/Entity.js'
+    }, {
         name: 'Player',
         className: 'player',
         type: 'load_class',

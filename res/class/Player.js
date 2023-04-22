@@ -1,10 +1,10 @@
 /**
  * 玩家
  */
-class Player {
+class Player extends Entity {
     constructor() {
         // 玩家名称
-        this.name = "player";
+        super('player');
         // 是否为AI
         this.isAI = false;
         // 玩家坐标
@@ -317,7 +317,7 @@ class Player {
 class Bot extends Player {
     constructor() {
         // 玩家名称
-        this.name = "bot";
+        super('bot');
         // 是否为AI
         this.isAI = true;
         // AI行为

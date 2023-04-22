@@ -1,6 +1,6 @@
-class Waypoint {
-    constructor(pos = [0, 0], id = "waypoint") {
-        this.name = "waypoint";
+class Waypoint extends Entity {
+    constructor(pos = [0, 0], id = 'waypoint') {
+        super('waypoint');
         this.id = id;
         this.pos = pos;
         this.attribute = {
