@@ -21,6 +21,7 @@ class Game {
         this.statistics = {
             gameTick: 0
         };
+        this.entity = [];
         this.event = {
             playerStateUpdate: function() {}
         };
@@ -58,6 +59,27 @@ class Game {
         this.event.playerStateUpdate(this.player[0].state, this.player[0].attribute);
     }
 
+    /**
+     * 加入实体
+     * @param {Entity} entity 实体对象
+     */
+    addEntity(entity) {
+        entity.UUID = this.getUUID();
+        entity.game = this;
+        this.entity.push(entity);
+    }
+
+    /**
+     * 通过 UUID 查找实体
+     * @param {String} uuid UUID
+     * @returns {Entity} 实体对象
+     */
+    findEntity(uuid) {
+        return this.entity.find(function(e) {
+            return e.UUID == uuid;
+        });
+    }
+
     newPlayer() {
         return false;
     }
@@ -67,12 +89,13 @@ class Game {
      * @param {Player} player 玩家对象
      */
     join(player) {
-        player.game = this;
         this.player.push(player);
+        this.addEntity(player);
     }
 
     addWaypoint(waypoint) {
         this.waypoint.push(waypoint);
+        this.addEntity(waypoint);
     }
 
     getWaypointPos(id) {
@@ -202,5 +225,25 @@ class Game {
      */
     playSound(name, volume = undefined, rate = undefined) {
         this.core.playSound(name, volume, rate);
+    };
+
+    /**
+     * 生成 UUID
+     * @returns UUID
+     */
+    getUUID() {
+        let timestamp = new Date().getTime();
+        let perforNow = (typeof performance !== 'undefined' && performance.now && performance.now() * 1000) || 0;
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+            let random = Math.random() * 16;
+            if (timestamp > 0) {
+                random = (timestamp + random) % 16 | 0;
+                timestamp = Math.floor(timestamp / 16);
+            } else {
+                random = (perforNow + random) % 16 | 0;
+                perforNow = Math.floor(perforNow / 16);
+            }
+            return (c === 'x' ? random : (random & 0x3) | 0x8).toString(16);
+        });
     };
 }

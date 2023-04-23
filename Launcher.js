@@ -74,6 +74,11 @@ let loadList = [
         type: 'load_class',
         path: 'res/class/Mixer.js'
     }, {
+        name: 'Bullet',
+        className: 'bullet',
+        type: 'load_class',
+        path: 'res/class/Bullet.js'
+    }, {
         name: 'SSUIComponent',
         className: 'ssui-component',
         type: 'load_class',

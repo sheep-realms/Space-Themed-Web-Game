@@ -22,12 +22,14 @@ res/ - 资源
 ├ script/ - 脚本
 └ style/ - 样式表
 index.html - 首页
+Launcher.js - 启动器
 ```
 
 ## 类
 | 类名 | 继承 | 描述 |
 | - | - | - |
 | Base | | 【游戏】基建设施 |
+| Bullet | | 【游戏】子弹（非实体） |
 | Bot | Player | 【游戏】机器玩家 |
 | Core | | 【系统】系统核心 |
 | Entity | | 【游戏】实体 |

@@ -5,6 +5,7 @@ class Entity {
     constructor(name = 'entity') {
         this.name = name;
         this.pos = [0, 0];
+        this.UUID = undefined;
         this.feature = {
             noDamage: false,
             noDestroy: false
