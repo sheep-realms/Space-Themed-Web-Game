@@ -34,6 +34,7 @@ Launcher.js - 启动器
 | Core | | 【系统】系统核心 |
 | Entity | | 【游戏】实体 |
 | Game | | 【游戏】游戏对局 |
+| Map | | 【游戏】地图 |
 | Mixer | | 【系统】混音器 |
 | Player | Entity | 【游戏】玩家 |
 | Resources | | 【系统】资源管理 |
@@ -42,4 +43,5 @@ Launcher.js - 启动器
 | SSUIComponent | | 【系统】SSUI 组件 |
 | SSUIScreen | | 【系统】SSUI 画面 |
 | Translator | | 【系统】本地化 |
+| Trigger | | 【游戏】触发器 |
 | Waypoint | Entity | 【游戏】路径点 |
