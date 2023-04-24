@@ -18,7 +18,7 @@ class Bullet {
         // 状态
         this.state = {
             distance: 0,            // 剩余距离
-            fllghtDistance: 0,      // 飞行距离
+            flightDistance: 0,      // 飞行距离
         };
         // 属性
         this.attribute = {
