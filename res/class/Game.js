@@ -124,13 +124,13 @@ class Game {
     }
 
     /**
-     * 测算玩家距离
-     * @param {Player} player1 玩家1
-     * @param {Player} player2 玩家2
+     * 测算实体距离
+     * @param {Entity} entity1 实体1
+     * @param {Entity} entity2 实体2
      * @returns 测算结果
      */
-    getPlayerDistance(player1, player2) {
-        return this.getDistance(player1.pos, player2.pos);
+    getPlayerDistance(entity1, entity2) {
+        return this.getDistance(entity1.pos, entity2.pos);
     }
 
     /**

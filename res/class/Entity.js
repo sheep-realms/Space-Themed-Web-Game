@@ -6,6 +6,7 @@ class Entity {
         this.name = name;
         this.pos = [0, 0];
         this.UUID = undefined;
+        this.size = 0;
         this.feature = {
             noDamage: false,
             noDestroy: false
