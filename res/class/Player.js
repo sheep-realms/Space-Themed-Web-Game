@@ -247,7 +247,7 @@ class Player extends Entity {
      * 玩家移动
      * @param {Number} angle 角度
      * @param {Number} [distance] 移动距离
-     * @returns {Array}
+     * @returns {Array<Number>} 移动后的坐标
      */
     move(angle, distance = this.attribute.mov_spd) {
         if (distance <= 0) return this.pos;
@@ -286,9 +286,9 @@ class Player extends Entity {
 
     /**
      * 玩家移动到指定位置
-     * @param {Array} pos 坐标
+     * @param {Array<Number>} pos 坐标
      * @param {Number} [distance] 移动距离
-     * @returns {Array}
+     * @returns {Array<Number>} 移动后的坐标
      */
     moveTo(pos, distance = this.attribute.mov_spd) {
         if (distance <= 0) return this.pos;
@@ -303,7 +303,7 @@ class Player extends Entity {
      * 玩家移动到指定路径点
      * @param {String} waypoint 路径点ID
      * @param {Number} [distance] 距离
-     * @returns {Array}
+     * @returns {Array<Number>} 移动后的坐标
      */
     moveToWaypoint(waypoint, distance = this.attribute.mov_spd) {
         let pos = this.game.getWaypointPos(waypoint);

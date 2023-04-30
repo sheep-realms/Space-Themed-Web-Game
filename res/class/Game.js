@@ -25,6 +25,9 @@ class Game {
         this.event = {
             playerStateUpdate: function() {}
         };
+        this.state = {
+            inMainLoop: false
+        };
     }
 
     /**
@@ -42,6 +45,7 @@ class Game {
      * 主循环
      */
     mainLoop() {
+        this.state.inMainLoop = true;
         this.statistics.gameTick++;
         
         for (let p of this.player) {
@@ -57,6 +61,8 @@ class Game {
         }
 
         this.event.playerStateUpdate(this.player[0].state, this.player[0].attribute);
+
+        this.state.inMainLoop = false;
     }
 
     /**
@@ -93,11 +99,20 @@ class Game {
         this.addEntity(player);
     }
 
+    /**
+     * 加入路径点
+     * @param {Waypoint} waypoint 路径点对象
+     */
     addWaypoint(waypoint) {
         this.waypoint.push(waypoint);
         this.addEntity(waypoint);
     }
 
+    /**
+     * 获取路径点坐标
+     * @param {String} id 路径点ID
+     * @returns {Array<Number>} 坐标
+     */
     getWaypointPos(id) {
         return this.waypoint.find(function(e) {
             return e.id == id;
@@ -115,7 +130,7 @@ class Game {
      * 测算距离
      * @param {Array<Number>} pos1 坐标1
      * @param {Array<Number>} pos2 坐标2
-     * @returns 测算结果
+     * @returns {Number} 测算结果
      */
     getDistance(pos1 = [0, 0], pos2 = [0, 0]) {
         let dx = Math.abs(pos1[0] - pos2[0]);
@@ -127,7 +142,7 @@ class Game {
      * 测算实体距离
      * @param {Entity} entity1 实体1
      * @param {Entity} entity2 实体2
-     * @returns 测算结果
+     * @returns {Number} 测算结果
      */
     getPlayerDistance(entity1, entity2) {
         return this.getDistance(entity1.pos, entity2.pos);
@@ -136,7 +151,7 @@ class Game {
     /**
      * 设置资源总量
      * @param {Number} value 资源总量
-     * @returns 资源总量
+     * @returns {Number} 资源总量
      */
     setResMax(value) {
         this.map.resources.res = value;
@@ -147,7 +162,7 @@ class Game {
     /**
      * 移除资源
      * @param {Number} value 移除的资源数量
-     * @returns 移除后的剩余数量
+     * @returns {Number} 移除后的剩余数量
      */
     delRes(value) {
         this.map.resources.res -= value;
@@ -211,7 +226,7 @@ class Game {
     /**
      * 设置资源采集效率
      * @param {Number} value 采集效率
-     * @returns 设置后的采集效率
+     * @returns {Number} 设置后的采集效率
      */
     setColEfficiency(value) {
         return this.map.resources.col_efficiency = value;
@@ -229,7 +244,7 @@ class Game {
 
     /**
      * 生成 UUID
-     * @returns UUID
+     * @returns {String} UUID
      */
     getUUID() {
         let timestamp = new Date().getTime();

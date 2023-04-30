@@ -15,8 +15,8 @@ class Entity {
 
     /**
      * 传送到指定位置
-     * @param {Array} pos 坐标
-     * @returns {Array} 坐标
+     * @param {Array<Number>} pos 坐标
+     * @returns {Array<Number>} 坐标
      */
     teleport(pos) {
         return this.pos = pos;
